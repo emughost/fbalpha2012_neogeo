@@ -212,15 +212,17 @@ else ifeq ($(platform), classic_armv7_a7)
 	ARCH = arm
 	BUILTIN_GPU = neon
 	USE_DYNAREC = 1
-	ifeq ($(shell echo `$(CC) -dumpversion` "< 4.9" | bc -l), 1)
-	  CFLAGS += -march=armv7-a
-	else
-	  CFLAGS += -march=armv7ve
-	  # If gcc is 5.0 or later
-	  ifeq ($(shell echo `$(CC) -dumpversion` ">= 5" | bc -l), 1)
-	    LDFLAGS += -static-libgcc -static-libstdc++
-	  endif
-	endif
+#	ifeq ($(shell echo `$(CC) -dumpversion` "< 4.9" | bc -l), 1)
+#	  CFLAGS += -march=armv7-a
+#	else
+#	  CFLAGS += -march=armv7ve
+#	  # If gcc is 5.0 or later
+#	  ifeq ($(shell echo `$(CC) -dumpversion` ">= 5" | bc -l), 1)
+#	    LDFLAGS += -static-libgcc -static-libstdc++
+#	  endif
+#	endif
+	PLATFORM_FLAGS += -march=armv7ve
+	LDFLAGS += -static-libgcc -static-libstdc++
 #######################################
 
 # CTR (3DS)
