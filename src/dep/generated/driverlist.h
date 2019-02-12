@@ -114,6 +114,7 @@ DRV		BurnDrvmslug3;
 DRV		BurnDrvmslug3nd;
 DRV		BurnDrvmslug4h;
 DRV		BurnDrvmslug4;
+DRV		BurnDrvmslug4hd;
 DRV		BurnDrvmslug4nd;
 DRV		BurnDrvms4plus;
 DRV		BurnDrvmslug5b;
@@ -441,6 +442,7 @@ static struct BurnDriver* pDriver[] = {
 	&BurnDrvmslug3nd,			// Metal Slug 3 (NGM-2560) (non encrypted P, decrypted C)
 	&BurnDrvmslug4h,			// Metal Slug 4 (NGH-2630)
 	&BurnDrvmslug4,				// Metal Slug 4 (NGM-2630)
+	&BurnDrvmslug4hd,			// Metal Slug 4 (NGM-2630) (decrypted C)
 	&BurnDrvmslug4nd,			// Metal Slug 4 (NGM-2630) (decrypted C)
 	&BurnDrvms4plus,			// Metal Slug 4 Plus (bootleg)
 	&BurnDrvmslug5b,			// Metal Slug 5 (bootleg)

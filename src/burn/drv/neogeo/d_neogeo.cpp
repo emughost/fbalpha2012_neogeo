@@ -15130,22 +15130,62 @@ struct BurnDriver BurnDrvmslug4nd = {
 	0x1000, 304, 224, 4, 3
 };
 
+// Metal Slug 4 (decrypted C)
+
+static struct BurnRomInfo mslug4hdRomDesc[] = {
+	{ "263-ph1.p1",   0x100000, 0xc67f5c8d, 1 | BRF_ESS | BRF_PRG }, //  0 68K code
+	{ "263-ph2.sp2",   0x400000, 0xbc3ec89e, 1 | BRF_ESS | BRF_PRG }, //  1 
+
+	{ "263-c1d.c1",    0x800000, 0xa75ffcde, 3 | BRF_GRA },           //  3 Sprite data
+	{ "263-c2d.c2",    0x800000, 0x5ab0d12b, 3 | BRF_GRA },           //  4 
+	{ "263-c3d.c3",    0x800000, 0x61af560c, 3 | BRF_GRA },           //  5 
+	{ "263-c4d.c4",    0x800000, 0xf2c544fd, 3 | BRF_GRA },           //  6 
+	{ "263-c5d.c5",    0x800000, 0x84c66c44, 3 | BRF_GRA },           //  7 
+	{ "263-c6d.c6",    0x800000, 0x5ed018ab, 3 | BRF_GRA },           //  8 
+
+	{ "263-m1.m1",    0x020000, 0x46ac8228, 4 | BRF_ESS | BRF_PRG }, // 11 Z80 code
+
+	{ "263-v1.v1",    0x800000, 0x01e9b9cd, 5 | BRF_SND },           // 12 Sound data
+	{ "263-v2.v2",    0x800000, 0x4ab2bf81, 5 | BRF_SND },           // 13 
+};
+
+STDROMPICKEXT(mslug4hd, mslug4hd, neogeo)
+STD_ROM_FN(mslug4hd)
+
+static INT32 mslug4hdInit()
+{
+	INT32 nRet;
+	nNeoProtectionXor = 0x00;
+	nRet = NeoInit();
+	if (nRet == 0) {
+		PCM2DecryptV(0x1000000, 1);
+	}
+	return nRet;
+}
+
+struct BurnDriver BurnDrvmslug4hd = {
+	"mslug4hd", "mslug4", "neogeo", NULL, "2002",
+	"Metal Slug 4 (NGM-2630) (decrypted C)\0", NULL, "SNK", "Neo Geo MVS",
+	NULL, NULL, NULL, NULL,
+	BDF_GAME_WORKING | BDF_CLONE, 2, HARDWARE_PREFIX_CARTRIDGE | HARDWARE_SNK_NEOGEO | HARDWARE_SNK_ENCRYPTED_M1, GBF_PLATFORM, FBF_MSLUG,
+	NULL, mslug4hdRomInfo, mslug4hdRomName, NULL, NULL, neogeoInputInfo, neogeoDIPInfo,
+	mslug4hdInit, NeoExit, NeoFrame, NeoRender, NeoScan, &NeoRecalcPalette,
+	0x1000, 304, 224, 4, 3
+};
+
 // Metal Slug 5 (decrypted C)
 
 static struct BurnRomInfo mslug5ndRomDesc[] = {
-	{ "268-p1cr.p1",   0x400000, 0xd0466792, 1 | BRF_ESS | BRF_PRG }, //  0 68K code
-	{ "268-p2cr.p2",   0x400000, 0xfbf6b61e, 1 | BRF_ESS | BRF_PRG }, //  1 
-	
-	{ "ms5n_s1.rom",    0x020000, 0x64952683, 2 | BRF_GRA },           //  1 Text data
+	{ "268-p1d.p1",    0x600000, 0x975eb06a, 1 | BRF_ESS | BRF_PRG }, //  0 68K code
 
-	{ "ms5n_c1.rom",   0x800000, 0xe8239365, 3 | BRF_GRA },           //  2 Sprite data
-	{ "ms5n_c2.rom",    0x800000, 0x89b21d4c, 3 | BRF_GRA },           //  3 
-	{ "ms5n_c3.rom",    0x800000, 0x3cda13a0, 3 | BRF_GRA },           //  4 
-	{ "ms5n_c4.rom",    0x800000, 0x9c00160d, 3 | BRF_GRA },           //  5 
-	{ "ms5n_c5.rom",    0x800000, 0x38754256, 3 | BRF_GRA },           //  6 
-	{ "ms5n_c6.rom",    0x800000, 0x59d33e9c, 3 | BRF_GRA },           //  7 
-	{ "ms5n_c7.rom",    0x800000, 0xc9f8c357, 3 | BRF_GRA },           //  8 
-	{ "ms5n_c8.rom",    0x800000, 0xfafc3eb9, 3 | BRF_GRA },           //  9 
+	{ "268-c1d.c1",    0x800000, 0xe8239365, 3 | BRF_GRA },           //  2 Sprite data
+	{ "268-c2d.c2",    0x800000, 0x89b21d4c, 3 | BRF_GRA },           //  3 
+	{ "268-c3d.c3",    0x800000, 0x3cda13a0, 3 | BRF_GRA },           //  4 
+	{ "268-c4d.c4",    0x800000, 0x9c00160d, 3 | BRF_GRA },           //  5 
+	{ "268-c5d.c5",    0x800000, 0x38754256, 3 | BRF_GRA },           //  6 
+	{ "268-c6d.c6",    0x800000, 0x59d33e9c, 3 | BRF_GRA },           //  7 
+	{ "268-c7d.c7",    0x800000, 0xc9f8c357, 3 | BRF_GRA },           //  8 
+	{ "268-c8d.c8",    0x800000, 0xfafc3eb9, 3 | BRF_GRA },           //  9 
 	
 	{ "268-m1.m1",     0x080000, 0x4a5a6e0e, 4 | BRF_ESS | BRF_PRG }, // 10 Z80 code
 
@@ -15161,9 +15201,8 @@ static INT32 mslug5ndInit()
 	INT32 nRet;
 	
 	nNeoProtectionXor = 0x00;
-	NeoCallbackActive->pInitialise = mslug5Callback;
 	
-	nRet = NeoPVCInit();
+	nRet = NeoInit();
 	
 	if (nRet == 0) {
 		const PCM2DecryptV2Info Info = { 0x4e001, 0xfe2cf6, { 0xc3, 0xfd, 0x81, 0xac, 0x6d, 0xe7, 0xbf, 0x9e } };
@@ -15177,8 +15216,8 @@ struct BurnDriver BurnDrvmslug5nd = {
 	"mslug5nd", "mslug5", "neogeo", NULL, "2003",
 	"Metal Slug 5 (NGM-2680) (decrypted C)\0", NULL, "SNK", "Neo Geo MVS",
 	NULL, NULL, NULL, NULL,
-	BDF_GAME_WORKING | BDF_CLONE, 2, HARDWARE_PREFIX_CARTRIDGE | HARDWARE_SNK_NEOGEO | HARDWARE_SNK_P32 | HARDWARE_SNK_ENCRYPTED_M1, GBF_PLATFORM, FBF_MSLUG,
+BDF_GAME_WORKING | BDF_CLONE, 2, HARDWARE_PREFIX_CARTRIDGE | HARDWARE_SNK_NEOGEO | HARDWARE_SNK_ALTERNATE_TEXT |HARDWARE_SNK_ENCRYPTED_M1, GBF_PLATFORM, FBF_MSLUG,
 	NULL, mslug5ndRomInfo, mslug5ndRomName, NULL, NULL, neogeoInputInfo, neogeoDIPInfo,
-	mslug5ndInit, NeoPVCExit, NeoFrame, NeoRender, NeoScan, &NeoRecalcPalette,
+	mslug5ndInit, NeoExit, NeoFrame, NeoRender, NeoScan, &NeoRecalcPalette,
 	0x1000, 304, 224, 4, 3
 };
