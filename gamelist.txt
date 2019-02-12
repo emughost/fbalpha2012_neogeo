@@ -1,6 +1,6 @@
 This list contains all games supported by FB Alpha.
 
-316 games supported in total; X = excluded from build; D = included in debug build only; NW = not working
+318 games supported in total; X = excluded from build; D = included in debug build only; NW = not working
 
   name		  status  full name						  parent	  year	  company	  hardware	  remarks
 +---------------+-------+-------------------------------------------------------+---------------+-------+---------------+---------------+---------------------------------------+
@@ -114,11 +114,13 @@ This list contains all games supported by FB Alpha.
 | mslug3nd	|  	| Metal Slug 3 (NGM-2560) (non encrypted P, decrypted C)| mslug3	| 2000	| SNK		| Neo Geo MVS	| 					|
 | mslug4h	|  	| Metal Slug 4 (NGH-2630)				| mslug4	| 2002	| Mega		| Neo Geo MVS	| 					|
 | mslug4	|  	| Metal Slug 4 (NGM-2630)				| 		| 2002	| Mega		| Neo Geo MVS	| 					|
+| mslug4nd	|  	| Metal Slug 4 (NGM-2630) (decrypted C)			| mslug4	| 2002	| SNK		| Neo Geo MVS	| 					|
 | ms4plus	|  	| Metal Slug 4 Plus (bootleg)				| mslug4	| 2002	| bootleg	| Neo Geo MVS	| 					|
 | mslug5b	|  	| Metal Slug 5 (bootleg)				| mslug5	| 2003	| bootleg	| Neo Geo MVS	| 					|
 | ms5pcb	|  	| Metal Slug 5 (JAMMA PCB)				| 		| 2003	| SNK Playmore	| Neo Geo MVS	| 					|
 | mslug5h	|  	| Metal Slug 5 (NGH-2680)				| mslug5	| 2003	| SNK Playmore	| Neo Geo MVS	| 					|
 | mslug5	|  	| Metal Slug 5 (NGM-2680)				| 		| 2003	| SNK Playmore	| Neo Geo MVS	| 					|
+| mslug5nd	|  	| Metal Slug 5 (NGM-2680) (decrypted C)			| mslug5	| 2003	| SNK		| Neo Geo MVS	| 					|
 | ms5plus	|  	| Metal Slug 5 Plus (bootleg)				| mslug5	| 2003	| bootleg	| Neo Geo MVS	| 					|
 | mslug3b6	|  	| Metal Slug 6 (Metal Slug 3 bootleg)			| mslug3	| 2000	| bootleg	| Neo Geo MVS	| 					|
 | mslugx	|  	| Metal Slug X - Super Vehicle-001 (NGM-2500)(NGH-2500)	| 		| 1999	| SNK		| Neo Geo MVS	| 					|

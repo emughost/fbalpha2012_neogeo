@@ -3,7 +3,8 @@
 #include "version.h"
 #include "burnint.h"
 #include "burn_sound.h"
-#include "driverlist_neogeo.h"
+//#include "driverlist_neogeo.h"
+#include "driverlist.h"
 
 INT32 nBurnVer = BURN_VERSION;		// Version number of the library
 
