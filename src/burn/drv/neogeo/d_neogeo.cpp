@@ -15050,3 +15050,39 @@ struct BurnDriver BurnDrvneoprimo = {
 	NeoInit, NeoExit, NeoFrame, NeoRender, NeoScan, &NeoRecalcPalette,
 	0x1000,	304, 224, 4, 3
 };
+
+// Metal Slug 3 (non encrypted P, decrypted C)
+
+static struct BurnRomInfo mslug3ndRomDesc[] = {
+	{ "256-ph1.bin",   0x100000, 0x9c42ca85, 1 | BRF_ESS | BRF_PRG }, //  0 68K code
+	{ "256-ph2.bin",   0x400000, 0x1f3d8cE8, 1 | BRF_ESS | BRF_PRG }, //  1 
+
+	{ "ms3n_c1.rom",    0x800000, 0x3540398c, 3 | BRF_GRA },           //  3 Sprite data
+	{ "ms3n_c2.rom",    0x800000, 0xbdd220f0, 3 | BRF_GRA },           //  4 
+	{ "ms3n_c3.rom",    0x800000, 0xbfaade82, 3 | BRF_GRA },           //  5 
+	{ "ms3n_c4.rom",    0x800000, 0x1463add6, 3 | BRF_GRA },           //  6 
+	{ "ms3n_c5.rom",    0x800000, 0x48ca7f28, 3 | BRF_GRA },           //  7 
+	{ "ms3n_c6.rom",    0x800000, 0x806eb36f, 3 | BRF_GRA },           //  8 
+	{ "ms3n_c7.rom",    0x800000, 0x9395b809, 3 | BRF_GRA },           //  9 
+	{ "ms3n_c8.rom",    0x800000, 0xa369f9d4, 3 | BRF_GRA },           // 10 
+
+	{ "256-m1.m1",    0x080000, 0xeaeec116, 4 | BRF_ESS | BRF_PRG }, // 11 Z80 code
+
+	{ "256-v1.v1",    0x400000, 0xf2690241, 5 | BRF_SND },           // 12 Sound data
+	{ "256-v2.v2",    0x400000, 0x7e2a10bd, 5 | BRF_SND },           // 13 
+	{ "256-v3.v3",    0x400000, 0x0eaec17c, 5 | BRF_SND },           // 14 
+	{ "256-v4.v4",    0x400000, 0x9b4b22d4, 5 | BRF_SND },           // 15 
+};
+
+STDROMPICKEXT(mslug3nd, mslug3nd, neogeo)
+STD_ROM_FN(mslug3nd)
+
+struct BurnDriver BurnDrvmslug3nd = {
+	"mslug3nd", "mslug3", "neogeo", NULL, "2000",
+	"Metal Slug 3 (NGM-2560) (non encrypted P, decrypted C)\0", NULL, "SNK", "Neo Geo MVS",
+	NULL, NULL, NULL, NULL,
+	BDF_GAME_WORKING | BDF_CLONE, 2, HARDWARE_PREFIX_CARTRIDGE | HARDWARE_SNK_NEOGEO, GBF_PLATFORM, FBF_MSLUG,
+	NULL, mslug3ndRomInfo, mslug3ndRomName, NULL, NULL, neogeoInputInfo, neogeoDIPInfo,
+	NeoInit, NeoExit, NeoFrame, NeoRender, NeoScan, &NeoRecalcPalette,
+	0x1000, 304, 224, 4, 3
+};
