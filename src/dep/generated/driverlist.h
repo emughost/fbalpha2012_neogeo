@@ -266,13 +266,16 @@ DRV		BurnDrvkof99e;
 DRV		BurnDrvkof99k;
 DRV		BurnDrvkof99h;
 DRV		BurnDrvkof99;
+DRV		BurnDrvkof99nd;
 DRV		BurnDrvkof99p;
 DRV		BurnDrvkof10th;
 DRV		BurnDrvkf2k5uni;
 DRV		BurnDrvkf10thep;
 DRV		BurnDrvkof2000;
+DRV		BurnDrvkof2knd;
 DRV		BurnDrvkof2000n;
 DRV		BurnDrvkof2001h;
+DRV		BurnDrvkof2001nd;
 DRV		BurnDrvkof2001;
 DRV		BurnDrvkf2k1pls;
 DRV		BurnDrvkf2k1pa;
@@ -594,13 +597,16 @@ static struct BurnDriver* pDriver[] = {
 	&BurnDrvkof99k,				// The King of Fighters '99 - Millennium Battle (Korean release)
 	&BurnDrvkof99h,				// The King of Fighters '99 - Millennium Battle (NGH-2510)
 	&BurnDrvkof99,				// The King of Fighters '99 - Millennium Battle (NGM-2510)
+	&BurnDrvkof99nd,			// The King of Fighters '99 - Millennium Battle (NGM-2510) (full decrypted)
 	&BurnDrvkof99p,				// The King of Fighters '99 - Millennium Battle (prototype)
 	&BurnDrvkof10th,			// The King of Fighters 10th Anniversary (bootleg)
 	&BurnDrvkf2k5uni,			// The King of Fighters 10th Anniversary 2005 Unique (bootleg)
 	&BurnDrvkf10thep,			// The King of Fighters 10th Anniversary Extra Plus (bootleg)
 	&BurnDrvkof2000,			// The King of Fighters 2000 (NGM-2570) (NGH-2570)
+	&BurnDrvkof2knd,			// The King of Fighters 2000 (non encrypted P, decrypted C)
 	&BurnDrvkof2000n,			// The King of Fighters 2000 (not encrypted)
 	&BurnDrvkof2001h,			// The King of Fighters 2001 (NGH-2621)
+	&BurnDrvkof2001nd,			// The King of Fighters 2001 (NGM-262) (non encrypted P, decrypted C)
 	&BurnDrvkof2001,			// The King of Fighters 2001 (NGM-262?)
 	&BurnDrvkf2k1pls,			// The King of Fighters 2001 Plus (set 1, bootleg / hack)
 	&BurnDrvkf2k1pa,			// The King of Fighters 2001 Plus (set 2, bootleg / hack)

@@ -1,6 +1,6 @@
 This list contains all games supported by FB Alpha.
 
-319 games supported in total; X = excluded from build; D = included in debug build only; NW = not working
+322 games supported in total; X = excluded from build; D = included in debug build only; NW = not working
 
   name		  status  full name						  parent	  year	  company	  hardware	  remarks
 +---------------+-------+-------------------------------------------------------+---------------+-------+---------------+---------------+---------------------------------------+
@@ -264,13 +264,16 @@ This list contains all games supported by FB Alpha.
 | kof99k	|  	| The King of Fighters '99 - Millennium Battle (Korean r| kof99		| 1999	| SNK		| Neo Geo MVS	| 					|
 | kof99h	|  	| The King of Fighters '99 - Millennium Battle (NGH-2510| kof99		| 1999	| SNK		| Neo Geo MVS	| 					|
 | kof99		|  	| The King of Fighters '99 - Millennium Battle (NGM-2510| 		| 1999	| SNK		| Neo Geo MVS	| 					|
+| kof99nd	|  	| The King of Fighters '99 - Millennium Battle (NGM-2510| kof99		| 1999	| SNK		| Neo Geo MVS	| 					|
 | kof99p	|  	| The King of Fighters '99 - Millennium Battle (prototyp| kof99		| 1999	| SNK		| Neo Geo MVS	| 					|
 | kof10th	|  	| The King of Fighters 10th Anniversary (bootleg)	| kof2002	| 2002	| bootleg	| Neo Geo MVS	| 					|
 | kf2k5uni	|  	| The King of Fighters 10th Anniversary 2005 Unique (boo| kof2002	| 2004	| bootleg	| Neo Geo MVS	| 					|
 | kf10thep	|  	| The King of Fighters 10th Anniversary Extra Plus (boot| kof2002	| 2005	| bootleg	| Neo Geo MVS	| 					|
 | kof2000	|  	| The King of Fighters 2000 (NGM-2570) (NGH-2570)	| 		| 2000	| SNK		| Neo Geo MVS	| 					|
+| kof2knd	|  	| The King of Fighters 2000 (non encrypted P, decrypted | kof2000	| 2000	| SNK		| Neo Geo MVS	| 					|
 | kof2000n	|  	| The King of Fighters 2000 (not encrypted)		| kof2000	| 2000	| SNK		| Neo Geo MVS	| 					|
 | kof2001h	|  	| The King of Fighters 2001 (NGH-2621)			| kof2001	| 2001	| SNK / Eolith	| Neo Geo AES	| 					|
+| kof2k1nd	|  	| The King of Fighters 2001 (NGM-262) (non encrypted P, | kof2001	| 2001	| SNK / Eolith	| Neo Geo MVS	| 					|
 | kof2001	|  	| The King of Fighters 2001 (NGM-262?)			| 		| 2001	| SNK / Eolith	| Neo Geo MVS	| 					|
 | kf2k1pls	|  	| The King of Fighters 2001 Plus (set 1, bootleg / hack)| kof2001	| 2002	| bootleg	| Neo Geo MVS	| 					|
 | kf2k1pa	|  	| The King of Fighters 2001 Plus (set 2, bootleg / hack)| kof2001	| 2002	| bootleg	| Neo Geo MVS	| 					|
